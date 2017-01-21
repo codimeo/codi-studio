@@ -5,7 +5,7 @@ PIDFILE="/var/run/codid_dev.pid" #Chemin pour PID
  
 #DAEMON="/opt/appengine/bin/dev_appserver.sh" #ligne de commande du programme
 #DAEMONOPT="-p 8888 -a 0.0.0.0 /home/nizarayed/git/appinventor-sources/appinventor/appengine/build/war/ > $LOGFILE 2>&1"  #argument à utiliser par le programme
-DAEMON="/home/nizarayed/git/appinventor-sources/codi.sh" #ligne de commande du programme
+DAEMON="/opt/codi-studio/codi.sh" #ligne de commande du programme
 USER="codi" #utilisateur du programme
 NAME="codid_dev" #Nom du programme (doit être identique à l'exécutable).
 #Attention le script est un script bash, le script ne portera donc pas l'extension .py mais .sh.
