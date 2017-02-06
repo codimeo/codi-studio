@@ -508,7 +508,7 @@
       <arg line="-war"/>
       <arg value="${build.war.dir}"/>
      <!-- <arg line="-logLevel INFO -style pretty"/>-->
-      <arg line="-logLevel DEBUG -style pretty"/>
+      <arg line="-logLevel INFO -style pretty"/>
       <arg value="com.google.appinventor.YaClient"/>
     </java>
   </target>
