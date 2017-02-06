@@ -33,6 +33,13 @@ public interface Images extends Resources {
   ImageResource appInventorLogo();
 
   /**
+   * Codimeo Logo
+   * {@link Ode#createWelcomeDialog(boolean)}
+   */
+  @Source("com/google/appinventor/images/codimeologo-32.png")
+  ImageResource codimeoLogo();
+
+  /**
    * Close button image for the box widget
    */
   @Source("com/google/appinventor/images/boxClose.png")

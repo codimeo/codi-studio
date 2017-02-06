@@ -625,7 +625,7 @@ a, a:visited, a:hover {
   padding: 3px;
   border: 1px solid #bbbbbb;
   border-bottom: 0px;
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -989px;
 }
 .gwt-StackPanel .gwt-StackPanelContent {
   border: 1px solid #bbbbbb;
@@ -655,13 +655,13 @@ a, a:visited, a:hover {
 }
 .gwt-DecoratedStackPanel .stackItemTopLeft {
   border-left: 1px solid #bbbbbb;
-  background: #d3def6 url(images/corner.png) no-repeat 0px -49px;
-  -background: #d3def6 url(images/corner_ie6.png) no-repeat 0px -49px;
+  background: #ffb4a6 url(images/corner.png) no-repeat 0px -49px;
+  -background: #ffb4a6 url(images/corner_ie6.png) no-repeat 0px -49px;
 }
 .gwt-DecoratedStackPanel .stackItemTopRight {
   border-right: 1px solid #bbbbbb;
-  background: #d3def6 url(images/corner.png) no-repeat -6px -49px;
-  -background: #d3def6 url(images/corner_ie6.png) no-repeat -6px -49px;
+  background: #ffb4a6 url(images/corner.png) no-repeat -6px -49px;
+  -background: #ffb4a6 url(images/corner_ie6.png) no-repeat -6px -49px;
 }
 .gwt-DecoratedStackPanel .stackItemTopLeftInner,
 .gwt-DecoratedStackPanel .stackItemTopRightInner {
@@ -678,7 +678,7 @@ a, a:visited, a:hover {
   background: url(images/hborder.png) 0px -21px repeat-x;
 }
 .gwt-DecoratedStackPanel .stackItemMiddleLeft {
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -989px;
   border-left: 1px solid #bbbbbb;
 }
 .gwt-DecoratedStackPanel .stackItemMiddleLeftInner,
@@ -687,13 +687,13 @@ a, a:visited, a:hover {
   height: 1px;
 }
 .gwt-DecoratedStackPanel .stackItemMiddleRight {
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -989px;
   border-right: 1px solid #bbbbbb;
 }
 .gwt-DecoratedStackPanel .stackItemMiddleCenter {
   font-weight: bold;
   font-size: 1.3em;
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -989px;
 }
 .gwt-DecoratedStackPanel .gwt-StackPanelItem-first .stackItemTopRight,
 .gwt-DecoratedStackPanel .gwt-StackPanelItem-first .stackItemTopLeft {
@@ -1098,10 +1098,10 @@ td.datePickerMonth {
   padding: 3px;
   border: 1px solid #bbbbbb;
   border-bottom: 0px;
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -989px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -989px;
 }
 .gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader-hovering {
-  background: #d3def6 url(images/hborder.png) repeat-x 0px -1464px;
+  background: #ffb4a6 url(images/hborder.png) repeat-x 0px -1464px;
 }
 .gwt-StackLayoutPanel .gwt-StackLayoutPanelContent {
   border: 1px solid #bbbbbb;
