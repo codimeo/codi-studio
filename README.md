@@ -80,6 +80,8 @@ The build server can be run from the terminal by typing:
 
 Note that you will only need to run the build server if you are going to build an app as an apk. You can do all the layout and programming without having the build server running, but you will need it to download the apk.
 
+It may be a good idea to copy the builded war directory (appinventor/appengine/build/war) to a dedicated folder external to the source.
+
 ###Accessing your local server
 You should now be up and running; you can test this by pointing your browser to:
 

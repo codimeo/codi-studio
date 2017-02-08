@@ -11,3 +11,7 @@ To test server:
 
 To run standalone zip file builder:
    ant RunMain -Dzip.file=$HOME/MyDownloads/ImageUpload.zip -Duser.name=$USER -Doutput.dir=/tmp
+
+To build deployment tar:
+   ant BuildDeploymentTar
+   Then follow instructions in appinventor/misc/buildserver/README
