@@ -8,15 +8,14 @@
 # Description:       Dev Build Server instance for Codi-Studio
 ### END INIT INFO
 
-PROG="/usr/bin/ant"
-OPT="RunLocalBuildServer"
-WORKDIR="/opt/codi-studio/appinventor"
-
-SCRIPT="cd $WORKDIR && exec $PROG $OPT" 
-RUNAS="root"
-
+PROG="/opt/codi-build/launch-buildserver.sh"
 PIDFILE="/var/run/codi-build.pid"
 LOGFILE="/var/log/codi-build.log"
+OPT="-l $LOGFILE"
+WORKDIR=
+
+SCRIPT="exec $PROG $OPT" 
+RUNAS="root"
 
 start() {
   if [ -f /var/run/$PIDNAME ] && kill -0 $(cat /var/run/$PIDNAME); then
@@ -24,7 +23,7 @@ start() {
     return 1
   fi
   echo 'Starting service…' >&2
-  local CMD="$SCRIPT &> $LOGFILE & echo \$!"
+  local CMD="$SCRIPT & echo \$!"
   su -c "$CMD" $RUNAS > "$PIDFILE"
   echo "Service started ($(cat $PIDFILE))" >&2
 }

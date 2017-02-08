@@ -9,7 +9,7 @@
 ### END INIT INFO
 
 PROG="/opt/appengine/bin/dev_appserver.sh"
-OPT="-p 8888 -a 0.0.0.0 /opt/codi-studio/appinventor/appengine/build/war/"
+OPT="-p 8888 -a 0.0.0.0 /opt/codi-studio/"
 
 SCRIPT="exec $PROG $OPT" 
 RUNAS="root"
