@@ -81,8 +81,7 @@ out.println("<center><font color=red><b>" + error + "</b></font></center><br/>")
                   src="/images/mzl.png" width="30" height="30" title="Sina WeiBo"></a>&nbsp;
 <%    } %>
 <a href="http://codimeo.com:8888" target="_blank">
-    <img class="img-scale"
-         src="/images/login-codimeo.png" width="50" height="30" title="Codi-Studio">
+    <img class="img-scale" src="/images/login-codimeo.png" title="Codi-Studio">
 </a>
 </center>
 <p></p>
