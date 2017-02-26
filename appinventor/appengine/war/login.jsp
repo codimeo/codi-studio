@@ -80,8 +80,11 @@ out.println("<center><font color=red><b>" + error + "</b></font></center><br/>")
 <a href="http://www.weibo.com/mitappinventor" target="_blank"><img class="img-scale"
                   src="/images/mzl.png" width="30" height="30" title="Sina WeiBo"></a>&nbsp;
 <%    } %>
-<a href="http://www.appinventor.mit.edu" target="_blank"><img class="img-scale"
-                src="/images/login-app-inventor.jpg" width="50" height="30" title="MIT App Inventor"></a></center>
+<a href="http://codimeo.com:8888" target="_blank">
+    <img class="img-scale"
+         src="/images/login-codimeo.png" width="50" height="30" title="Codi-Studio">
+</a>
+</center>
 <p></p>
 
 <p style="text-align: center; clear:both;"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"
