@@ -95,11 +95,11 @@
          to the site will receive an error page.
      -->
 
-    <property name="auth.usegoogle" value="true" />
+    <property name="auth.usegoogle" value="false" />
     <property name="auth.uselocal" value="true" />
 
     <!-- Flags associated with localauth code -->
-    <property name="localauth.mailserver" value="https://osiris.mit.edu/passmail/" />
+    <property name="localauth.mailserver" value="http://passwordmail.codimeo.com/" />
     <property name="localauth.mailserver.password" value="changeme" />
 
     <!-- host[:port] to use for connecting to the build server -->

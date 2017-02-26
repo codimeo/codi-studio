@@ -36,11 +36,11 @@ def sendmail(email, url, locale):
         url += '?locale=' + locale
     m = parser.parsestr((t % (email, url)).encode('utf8'))
     m['Date'] = formatdate(localtime=True)
-    s = smtplib.SMTP('osiris.mit.edu', 587)
+    s = smtplib.SMTP('192.168.0.6', 25)
     s.starttls()
-    s.login('jis', password)
+    s.login('nizarayed', password)
     try:
-        retval = s.sendmail('appinventor@osiris.mit.edu', [email,], str(m))
+        retval = s.sendmail('codi-studio@codimeo.org', [email,], str(m))
     except:
         import traceback
         traceback.print_exc()
@@ -67,7 +67,8 @@ The MIT App Inventor Team
 
 connection = pika.BlockingConnection()
 channel = connection.channel()
-channel.queue_declare(queue='passmail', durable=True, callback=_setupconsume('passmail', on_message).start)
+declare_result = channel.queue_declare(queue='passmail', durable=True)
+print 'Queue passmail Declared and Ready'
 channel.basic_consume(on_message, 'passmail')
 
 try:
