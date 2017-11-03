@@ -1,0 +1,3 @@
+[submodule "appinventor-sources"]
+	path = appinventor-sources
+	url = https://github.com/mit-cml/appinventor-sources.git
