@@ -198,7 +198,7 @@
     <copy todir="${AiServerLib-class.dir}/${appinventor.pkg}/server">
       <fileset dir="src/${appinventor.pkg}/server/" includes="*.properties" />
     </copy>
-    <codi.javac destdir="${AiServerLib-class.dir}"
+    <ai.javac destdir="${AiServerLib-class.dir}"
               source="1.7" target="1.7">
       <include name="${appinventor.pkg}/server/**/*.java" />
       <classpath>
@@ -207,7 +207,7 @@
         <!-- gwt lib needed only at compile time for javax.servlet.http.HttpServlet* -->
         <pathelement location="${gwt.sdk}/gwt-user.jar"/>
       </classpath>
-    </codi.javac>
+    </ai.javac>
 
     <jar basedir="${AiServerLib-class.dir}"
          destfile="${local.build.dir}/AiServerLib.jar" />
@@ -322,14 +322,14 @@
     <property name="AiSharedLib-class.dir" location="${class.dir}/AiSharedLib" />
     <mkdir dir="${AiSharedLib-class.dir}" />
 
-    <codi.javac destdir="${AiSharedLib-class.dir}"
+    <ai.javac destdir="${AiSharedLib-class.dir}"
               source="1.7" target="1.7">
       <include name="${appinventor.pkg}/shared/**/*.java" />
       <classpath>
         <!-- jars that we put in <build>/war/WEB-INF/lib -->
         <fileset dir="${build.war.dir}/WEB-INF/lib" includes="*.jar" excludes="AiSharedLib.jar"/>
       </classpath>
-    </codi.javac>
+    </ai.javac>
 
     <jar basedir="${AiSharedLib-class.dir}"
          destfile="${local.build.dir}/AiSharedLib.jar" />
@@ -378,7 +378,7 @@
     <property name="AiRebindLib-class.dir" location="${class.dir}/AiRebindLib" />
     <mkdir dir="${AiRebindLib-class.dir}" />
 
-    <codi.javac destdir="${AiRebindLib-class.dir}"
+    <ai.javac destdir="${AiRebindLib-class.dir}"
               source="1.7" target="1.7">
       <include name="${appinventor.pkg}/rebind/**/*.java" />
       <classpath>
@@ -386,7 +386,7 @@
         <pathelement location="${gwt.sdk}/gwt-dev.jar"/>
         <pathelement location="${gwt.sdk}/gwt-user.jar"/>
       </classpath>
-    </codi.javac>
+    </ai.javac>
 
     <jar destfile="${local.build.dir}/AiRebindLib.jar">
       <fileset dir="${AiRebindLib-class.dir}"/>
@@ -404,7 +404,7 @@
           description="App Inventor Client library - compile java source to bytecode"
           depends="common_BlocksEditorHttpConstants,common_CommonUtils,common_CommonVersion,components_CommonConstants,components_JsonComponentDescription,components_ComponentTranslation">
     <mkdir dir="${build.war.dir}/WEB-INF/classes"/>
-    <codi.javac encoding="utf-8"
+    <ai.javac encoding="utf-8"
               destdir="${build.war.dir}/WEB-INF/classes"
               srcdir="${src.dir};${build.dir}/components/ComponentTranslation/src"
               source="1.7" target="1.7" nowarn="true"
@@ -427,7 +427,7 @@
         <!-- gwt libs -->
         <pathelement location="${gwt.sdk}/gwt-user.jar"/>
       </classpath>
-    </codi.javac>
+    </ai.javac>
     <copy todir="${build.war.dir}/WEB-INF/classes/com/google/appinventor"
           file="${build.dir}/components/simple_components.json" />
     <copy todir="${build.war.dir}/WEB-INF/classes">

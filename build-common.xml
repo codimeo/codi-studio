@@ -18,6 +18,8 @@
        ===================================================================== -->
   <!-- codistudio.dir is the root directory of the codi-studio world -->
   <dirname property="codistudio.dir" file="${ant.file.CodiDefinitions}" />
+  <!-- codi.sources.dir is the root directory of the codi-studio specific sources -->
+  <dirname property="codi.sources.dir" file="${codistudio.dir}/codistudio-sources" />
 
   <!-- appinventor.dir is the root directory of the appinventor world -->
   <property name="appinventor.dir" location="${codistudio.dir}/appinventor-sources/appinventor" />
@@ -25,7 +27,7 @@
   <!-- build.dir is the grandparent directory for output files that were
        created by another project. This directory is the same for each project.
        For example, if a project needs CommonUtils.jar, which is built by the
-       common project, the codi.javac
+       common project, the ai.javac
        task's classpath would include this entry:
        <pathelement location="${build.dir}/common/CommonUtils.jar"/>
        -->
@@ -51,11 +53,11 @@
   <!-- class.dir is the directory for class files created by javac. This
        directory is different for each project. Most projects create a separate
        subdirectory for each target that produces class files. For example,
-       when the common project builds CommonUtils, the codi.javac task's destdir
+       when the common project builds CommonUtils, the ai.javac task's destdir
        attribute looks like this:
        <property name="CommonUtils-class.dir" location="${class.dir}/CommonUtils" />
        <mkdir dir="${CommonUtils-class.dir}" />
-       <codi.javac destdir="${CommonUtils-class.dir}">
+       <ai.javac destdir="${CommonUtils-class.dir}">
        -->
   <property name="class.dir" location="${local.build.dir}/classes" />
 
@@ -80,7 +82,7 @@
   </taskdef>
 
   <!-- =====================================================================
-       Define task codi.javac as the default compilation task for AI.  It sets
+       Define task ai.javac as the default compilation task for AI.  It sets
        includeantruntime to false to override broken default behavior
        (http://goo.gl/XM29h), and it sets srcdir and sourcepath.
        Invocations of the task must specify includes. If -Ddebug=true is
@@ -92,7 +94,7 @@
   <condition property="debug.compile" else="false">
     <isset property="debug" />
   </condition>
-  <macrodef name="codi.javac">
+  <macrodef name="ai.javac">
     <attribute name="srcdir" default="${src.dir}"/>
     <attribute name="destdir"/>
     <attribute name="encoding" default="utf-8"/>
@@ -125,22 +127,22 @@
   </macrodef>
 
   <!-- =====================================================================
-       Define task codi.javactests as the compilation task for building the
+       Define task ai.javactests as the compilation task for building the
        test classes. The test classes include debug information so we can
        see the line numbers of test failures.
        ===================================================================== -->
-  <presetdef name="codi.javactests">
-    <codi.javac srcdir="${tests.dir}"
+  <presetdef name="ai.javactests">
+    <ai.javac srcdir="${tests.dir}"
               debug="true"/>
   </presetdef>
 
   <!-- =====================================================================
-       Define task codi.javac7 as the compilation task for building the blocks
+       Define task ai.javac5 as the compilation task for building the blocks
        editor and all of its dependencies.
        ===================================================================== -->
-  <presetdef name="codi.javac7">
-    <codi.javac source="7"
-              target="7"/>
+  <presetdef name="ai.javac5">
+    <ai.javac source="5"
+              target="5"/>
   </presetdef>
 
   <!-- =====================================================================
@@ -187,11 +189,11 @@
         regexp="(.*\.)*(.*)"
         select="\2" />
 
-      <codi.javactests destdir="${classdir}" >
+      <ai.javactests destdir="${classdir}" >
         <include name="@{aij-dir}/**/${test_name.class}.java" if="test_name" />
         <include name="@{aij-dir}/**/*.java" unless="test_name" />
         <classpath refid="libsFor@{aij-testingtarget}.path"/>
-      </codi.javactests>
+      </ai.javactests>
 
       <jar basedir="${classdir}"
            destfile="${local.build.dir}/@{aij-testingtarget}.jar" />
